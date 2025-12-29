@@ -1,0 +1,15 @@
+# Build Artifacts (Do not commit these)
+*.nes
+*.o
+*.obj
+*.map
+*.dbg
+*.lbl
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Emulator Save States (If you save inside the folder)
+*.ss0
+*.sav
