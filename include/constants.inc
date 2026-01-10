@@ -22,8 +22,8 @@ WIN_DELAY           = 120       ; Delay before Win Screen
 ; Player (24x64)
 WALL_MIN_X          = 6
 WALL_MAX_X          = 228
-WALL_MIN_Y          = 58
-WALL_MAX_Y          = 162
+WALL_MIN_Y          = 46
+WALL_MAX_Y          = 144
 
 ; Bull (40x24)
 BULL_MIN_X          = 16

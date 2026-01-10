@@ -666,11 +666,10 @@ InitGame:
     lda cheat_active
     beq @HeartsNormal
     
-    ; Cheat Mode UI (Empty Hearts)
     lda PPU_STATUS
     lda #$23
     sta PPU_ADDR
-    lda #$A6        
+    lda #$66
     sta PPU_ADDR
     lda #TILE_EMPTY
     sta PPU_DATA
@@ -678,7 +677,7 @@ InitGame:
     lda PPU_STATUS
     lda #$23
     sta PPU_ADDR
-    lda #$A8        
+    lda #$68
     sta PPU_ADDR
     lda #TILE_EMPTY
     sta PPU_DATA
@@ -686,7 +685,7 @@ InitGame:
     lda PPU_STATUS
     lda #$23
     sta PPU_ADDR
-    lda #$AA        
+    lda #$6A
     sta PPU_ADDR
     lda #TILE_EMPTY
     sta PPU_DATA
@@ -697,19 +696,11 @@ InitGame:
     lda #>pal_arena
     sta map_ptr_hi
     jsr LoadBgPalette
-    
-    ; Score Setup
+   
     lda PPU_STATUS
     lda #$23
     sta PPU_ADDR
-    lda #$FF
-    sta PPU_ADDR
-    lda #$55   
-    sta PPU_DATA
-    lda PPU_STATUS
-    lda #$23
-    sta PPU_ADDR
-    lda #$BD        
+    lda #$7D
     sta PPU_ADDR
     ldx #0
     lda ScoreTileTable, x
@@ -1189,7 +1180,7 @@ PickNewQTEButton:
 SpawnPlayer:
     lda #120
     sta player_x
-    lda #160
+    lda #144
     sta player_y
     lda #0
     sta walking
@@ -1197,24 +1188,25 @@ SpawnPlayer:
 SpawnBull:
     lda #110
     sta bull_x
-    lda #80
+    
+    lda #64
     sta bull_y
+    
     lda #STATE_SPAWN_WAIT
     sta game_state
     
-    ; Dynamic Spawn Delay based on Score
     lda player_score
     cmp #16
     bcs @CheckTier2
-    lda #60             ; Tier 1 (0-15)
+    lda #60
     jmp @SetTimer
 @CheckTier2:
     cmp #21
     bcs @Tier3
-    lda #90             ; Tier 2 (16-20)
+    lda #90
     jmp @SetTimer
 @Tier3:
-    lda #120            ; Tier 3 (21+)
+    lda #120
 @SetTimer:
     sta bull_state_timer
     rts
@@ -1846,13 +1838,13 @@ RemoveHeartUI_Safe:
     beq ClearH1 
     rts
 ClearH3:
-    lda #$AA
+    lda #$6A
     jmp DoClear
 ClearH2:
-    lda #$A8
+    lda #$68
     jmp DoClear
 ClearH1:
-    lda #$A6
+    lda #$66
     jmp DoClear
 DoClear:
     sta PPU_ADDR        
@@ -1864,7 +1856,7 @@ UpdateScoreUI_Safe:
     lda PPU_STATUS
     lda #$23
     sta PPU_ADDR
-    lda #$BD        
+    lda #$7D
     sta PPU_ADDR
     lda player_score
     ldx #0
