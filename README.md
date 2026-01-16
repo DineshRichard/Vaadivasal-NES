@@ -1,4 +1,4 @@
-# Vaadivasal (வாடிவாசல்) - The First Tamil NES Game
+# Vaadivasal (வாடிவாசல்) - The First Tamil 8-Bit Game
 
 ![Vaadivasal NES Box Art](extras/box_art/NES_Cartridge_Label.png)
 
@@ -6,7 +6,14 @@
 
 **Vaadivasal** is an 8-bit homebrew game developed for the Nintendo Entertainment System (NES) / Famiclone. It is a digital tribute to the ancient Tamil sport of **Jallikattu**. The game puts you in the shoes of a young tamer facing 25 legendary bulls in the Alanganallur arena.
 
-This project marks a historic milestone as the **First NES Game developed entirely in the Tamil language**.
+This project marks a historic milestone as the **First 8-Bit Game developed entirely in the Tamil language**.
+
+---
+
+### **Play Now**
+Experience the world's first Tamil 8-bit game on your browser:
+
+**[Play Vaadivasal Online](https://dineshrichard.itch.io/vaadivasal)**
 
 ---
 
@@ -110,7 +117,7 @@ To compile this game from source, you need the **cc65** compiler suite.
 
 I am documenting the entire journey of creating this game on my YouTube channel. Watch the **"Making of Vaadivasal"** video here:
 
-[**▶ Click Here to Watch on YouTube**](https://www.youtube.com/@dk__richard)
+[**▶ Click Here to Watch on YouTube**](https://youtu.be/n5p30030nUk)
 
 ---
 
