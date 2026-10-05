@@ -13,3 +13,8 @@ Thumbs.db
 # Emulator Save States (If you save inside the folder)
 *.ss0
 *.sav
+# Android build helpers / temporary files
+Vaadivasal-test.apk
+android/store/raw/
+android/store/sizes/
+android/store/contact.png

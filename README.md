@@ -98,6 +98,15 @@ To compile this game from source, you need the **cc65** compiler suite.
 
 ---
 
+## 📱 Android App
+
+An Android version (the same game running inside the FCEUmm emulator core, with touch controls) lives in [`android/`](android/).
+See [`android/README.md`](android/README.md) for building it, [`android/NOTICE.md`](android/NOTICE.md) for licences and
+credits, and the [privacy policy](docs/privacy-policy.md). The Android app is GPL v2 because it includes the
+GPL-licensed emulator core; the game itself remains MIT.
+
+---
+
 ## 📜 Credits
 
 * **Developer:** Dinesh Richard
