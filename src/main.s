@@ -464,8 +464,15 @@ CheckPauseInput:
     sta game_state
     lda #$0F                ; Dim Screen
     sta soft_ppu_mask
-    lda #$00
-    sta APU_STATUS
+    ; Mute by volume instead of disabling the channels: writing 0 to $4015
+    ; clears the hardware length counters, and FamiStudio only reloads them
+    ; when a note's period changes, so some channels stayed silent after resume.
+    lda #$30
+    sta APU_PULSE1_VOL
+    sta APU_PULSE2_VOL
+    sta APU_NOISE_VOL
+    lda #$80
+    sta APU_TRI_LINEAR
     rts
 
 @Unpause:
